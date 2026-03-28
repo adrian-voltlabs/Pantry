@@ -19,11 +19,28 @@ class IngredientExtractor:
     comparison so that "tomatoes" matches the vocab entry "tomato".
     """
 
+    # Common base ingredients that should always be recognized, even if
+    # the vocabulary only contains compound forms like "cream cheese, softened".
+    _BASE_INGREDIENTS: set[str] = {
+        "cheese", "bread", "milk", "butter", "cream", "egg", "flour", "sugar",
+        "salt", "pepper", "oil", "rice", "pasta", "chicken", "beef", "pork",
+        "fish", "salmon", "shrimp", "onion", "garlic", "tomato", "potato",
+        "carrot", "celery", "lemon", "lime", "orange", "apple", "banana",
+        "chocolate", "vanilla", "cinnamon", "honey", "vinegar", "mustard",
+        "yogurt", "ham", "bacon", "sausage", "turkey", "lamb", "tofu",
+        "corn", "bean", "pea", "spinach", "lettuce", "cucumber", "avocado",
+        "mushroom", "ginger", "basil", "parsley", "cilantro", "thyme",
+        "rosemary", "oregano", "cumin", "paprika", "nutmeg", "coconut",
+        "almond", "walnut", "pecan", "cashew", "peanut", "oat", "barley",
+        "quinoa", "noodle", "tortilla", "wine", "beer", "broth", "stock",
+    }
+
     def __init__(
         self,
         vocab_path: str = "data/processed/ingredient_vocab.json",
     ) -> None:
         self._vocab: set[str] = self._load_vocab(vocab_path)
+        self._vocab |= self._BASE_INGREDIENTS
         self._nlp = spacy.load("en_core_web_sm")
 
     # ------------------------------------------------------------------
