@@ -29,3 +29,9 @@ out/
 
 # OS
 .DS_Store
+
+# Claude / planning docs (local only)
+.claude/
+docs/superpowers/
+PRD.md
+pantry.md
