@@ -21,6 +21,7 @@ class RecipeRetriever:
 
     INGREDIENT_WEIGHT = 0.7
     MOOD_WEIGHT = 0.3
+    INGREDIENT_OVERLAP_BOOST = 0.15  # Per matched ingredient, added to FAISS score
 
     def __init__(self, index_path: str, recipes_path: str) -> None:
         self._index = faiss.read_index(str(Path(index_path)))
@@ -73,7 +74,7 @@ class RecipeRetriever:
         query_matrix = query_vector.reshape(1, -1).astype(np.float32)
         scores, indices = self._index.search(query_matrix, over_fetch)
 
-        results: list[dict] = []
+        candidates: list[dict] = []
         for rank in range(over_fetch):
             idx = int(indices[0][rank])
             if idx < 0:
@@ -82,21 +83,25 @@ class RecipeRetriever:
             explanation = self._build_explanation(
                 recipe, ingredient_tokens, mood_vector, constraints
             )
-            results.append(
+            # Re-rank: boost score for recipes that contain queried ingredients
+            base_score = float(scores[0][rank])
+            overlap_count = len(explanation["matched_ingredients"])
+            boosted_score = base_score + overlap_count * self.INGREDIENT_OVERLAP_BOOST
+            candidates.append(
                 {
                     "id": recipe["id"],
                     "title": recipe["title"],
                     "ingredients": recipe["ingredients"],
                     "instructions": recipe["instructions"],
                     "image_name": recipe.get("image_name"),
-                    "score": float(scores[0][rank]),
+                    "score": boosted_score,
                     "explanation": explanation,
                 }
             )
-            if len(results) >= top_k:
-                break
 
-        return results
+        # Sort by boosted score and return top_k
+        candidates.sort(key=lambda r: r["score"], reverse=True)
+        return candidates[:top_k]
 
     # ------------------------------------------------------------------
     # Internals

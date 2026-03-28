@@ -181,7 +181,7 @@ class PantryPipeline:
         over_fetch = top_k * 3
         scores, indices = self._retriever._index.search(query_matrix, over_fetch)
 
-        results: list[dict] = []
+        candidates: list[dict] = []
         for rank in range(over_fetch):
             idx = int(indices[0][rank])
             if idx < 0:
@@ -190,21 +190,25 @@ class PantryPipeline:
             explanation = RecipeRetriever._build_explanation(
                 recipe, ingredient_tokens, embedded["_query_vector_np"], constraints
             )
-            results.append(
+            # Re-rank: boost recipes that contain queried ingredients
+            base_score = float(scores[0][rank])
+            overlap_count = len(explanation["matched_ingredients"])
+            boosted_score = base_score + overlap_count * RecipeRetriever.INGREDIENT_OVERLAP_BOOST
+            candidates.append(
                 {
                     "id": recipe["id"],
                     "title": recipe["title"],
                     "ingredients": recipe["ingredients"],
                     "instructions": recipe["instructions"],
                     "image_name": recipe.get("image_name"),
-                    "score": float(scores[0][rank]),
+                    "score": boosted_score,
                     "explanation": explanation,
                 }
             )
-            if len(results) >= top_k:
-                break
 
-        return {"results": results}
+        # Sort by boosted score and return top_k
+        candidates.sort(key=lambda r: r["score"], reverse=True)
+        return {"results": candidates[:top_k]}
 
     # ------------------------------------------------------------------
     # Convenience: end-to-end search

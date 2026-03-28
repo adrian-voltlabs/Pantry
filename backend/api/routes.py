@@ -122,29 +122,32 @@ def recommend(req: RecommendRequest):
     over_fetch = top_k * 3
     scores, indices = pipeline._retriever._index.search(query_matrix, over_fetch)
 
-    results: list[dict] = []
+    from pantry.retrieval import RecipeRetriever
+
+    candidates: list[dict] = []
     n_returned = indices.shape[1]
     for rank in range(min(over_fetch, n_returned)):
         idx = int(indices[0][rank])
         if idx < 0:
             continue
         recipe = pipeline._retriever._recipes[idx]
-        results.append(
+        explanation = RecipeRetriever._build_explanation(
+            recipe, [], query_vector, req.constraints
+        )
+        base_score = float(scores[0][rank])
+        overlap_count = len(explanation["matched_ingredients"])
+        boosted_score = base_score + overlap_count * RecipeRetriever.INGREDIENT_OVERLAP_BOOST
+        candidates.append(
             {
                 "id": recipe["id"],
                 "title": recipe["title"],
                 "ingredients": recipe["ingredients"],
                 "instructions": recipe["instructions"],
                 "image_name": recipe.get("image_name"),
-                "score": float(scores[0][rank]),
-                "explanation": {
-                    "matched_ingredients": [],
-                    "mood_match": False,
-                    "constraints_met": req.constraints,
-                },
+                "score": boosted_score,
+                "explanation": explanation,
             }
         )
-        if len(results) >= top_k:
-            break
 
-    return RecommendResponse(results=results)
+    candidates.sort(key=lambda r: r["score"], reverse=True)
+    return RecommendResponse(results=candidates[:top_k])
