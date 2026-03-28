@@ -3,6 +3,7 @@
 import { Hero } from "@/components/hero";
 import { SearchInput } from "@/components/search-input";
 import { ParseFeedback } from "@/components/parse-feedback";
+import { ResultsGrid } from "@/components/results-grid";
 import { useRecipeSearch } from "@/hooks/use-recipe-search";
 
 export default function Home() {
@@ -20,13 +21,7 @@ export default function Home() {
         <p className="mt-8 text-red-500 font-body text-sm">{error}</p>
       )}
 
-      {stage === "done" && results.length > 0 && (
-        <div className="mt-12 px-4 w-full max-w-4xl">
-          <p className="font-body text-terracotta-400 text-center">
-            Found {results.length} recipe{results.length !== 1 ? "s" : ""}
-          </p>
-        </div>
-      )}
+      <ResultsGrid results={results} stage={stage} />
     </div>
   );
 }
