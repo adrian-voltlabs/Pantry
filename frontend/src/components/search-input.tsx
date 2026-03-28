@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Search, Loader2 } from "lucide-react";
 
 interface SearchInputProps {
   onSearch: (text: string) => void;
   isLoading: boolean;
+  initialQuery?: string;
 }
 
 const exampleQueries = [
@@ -15,8 +16,12 @@ const exampleQueries = [
   "elegant dinner party",
 ];
 
-export function SearchInput({ onSearch, isLoading }: SearchInputProps) {
+export function SearchInput({ onSearch, isLoading, initialQuery }: SearchInputProps) {
   const [text, setText] = useState("");
+
+  useEffect(() => {
+    if (initialQuery) setText(initialQuery);
+  }, [initialQuery]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

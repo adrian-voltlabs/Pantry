@@ -1,5 +1,7 @@
 "use client";
 
+import { Suspense, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { Hero } from "@/components/hero";
 import { SearchInput } from "@/components/search-input";
 import { ParseFeedback } from "@/components/parse-feedback";
@@ -7,18 +9,33 @@ import { PipelineStage } from "@/components/pipeline-stage";
 import { SkeletonGrid } from "@/components/skeleton-grid";
 import { ResultsGrid } from "@/components/results-grid";
 import { useRecipeSearch } from "@/hooks/use-recipe-search";
+import Link from "next/link";
 
-export default function Home() {
+function HomeContent() {
   const { stage, parsed, results, error, search, reset } = useRecipeSearch();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const q = searchParams.get("q");
+    if (q && stage === "idle") {
+      search(q);
+    }
+  }, [searchParams]);
 
   const isLoading = stage === "parsing" || stage === "embedding" || stage === "recommending";
 
   const showIdle = stage === "idle" && results.length === 0;
 
   return (
-    <div className="flex flex-col flex-1 items-center bg-cream min-h-screen">
+    <div className="flex flex-col flex-1 items-center bg-cream min-h-screen relative">
+      <Link
+        href="/about"
+        className="absolute top-5 right-6 font-body text-xs text-terracotta-300 hover:text-terracotta-500 transition-colors tracking-wide"
+      >
+        How it works
+      </Link>
       <Hero />
-      <SearchInput onSearch={search} isLoading={isLoading} />
+      <SearchInput onSearch={search} isLoading={isLoading} initialQuery={searchParams.get("q") ?? undefined} />
       <ParseFeedback parsed={parsed} stage={stage} />
       <PipelineStage stage={stage} />
 
@@ -48,10 +65,21 @@ export default function Home() {
       )}
 
       {showIdle && (
-        <p className="mt-24 mb-8 font-body text-xs text-terracotta-300 tracking-widest uppercase">
-          Powered by classical NLP
-        </p>
+        <Link
+          href="/about"
+          className="mt-24 mb-8 font-body text-xs text-terracotta-300 hover:text-terracotta-500 tracking-widest uppercase transition-colors"
+        >
+          How it works &rarr;
+        </Link>
       )}
     </div>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense>
+      <HomeContent />
+    </Suspense>
   );
 }
