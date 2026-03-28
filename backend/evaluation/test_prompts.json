@@ -1,0 +1,331 @@
+[
+  {
+    "prompt": "chicken and rice",
+    "expected_ingredients": ["chicken", "rice"],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "ingredient-only"
+  },
+  {
+    "prompt": "garlic butter pasta",
+    "expected_ingredients": ["butter", "garlic", "pasta"],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "ingredient-only"
+  },
+  {
+    "prompt": "tomato basil spinach",
+    "expected_ingredients": ["basil", "spinach", "tomato"],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "ingredient-only"
+  },
+  {
+    "prompt": "avocado and lime",
+    "expected_ingredients": ["avocado", "lime"],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "ingredient-only"
+  },
+  {
+    "prompt": "chicken breast with garlic and lemon",
+    "expected_ingredients": ["chicken", "chicken breast", "garlic", "lemon"],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "ingredient-only"
+  },
+  {
+    "prompt": "bacon and egg",
+    "expected_ingredients": ["bacon", "egg"],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "ingredient-only"
+  },
+  {
+    "prompt": "ground beef with onion and pepper",
+    "expected_ingredients": ["ground beef", "onion", "pepper"],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "ingredient-only"
+  },
+  {
+    "prompt": "ginger cilantro lime rice",
+    "expected_ingredients": ["cilantro", "ginger", "lime", "rice"],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "ingredient-only"
+  },
+  {
+    "prompt": "broccoli and carrot stir fry",
+    "expected_ingredients": ["broccoli", "carrot"],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "ingredient-only"
+  },
+  {
+    "prompt": "rosemary thyme oregano chicken",
+    "expected_ingredients": ["chicken", "oregano", "rosemary", "thyme"],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "ingredient-only"
+  },
+  {
+    "prompt": "cozy comfort food",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": ["cozy", "comfort"],
+    "category": "mood-only"
+  },
+  {
+    "prompt": "elegant dinner party",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": ["elegant", "party"],
+    "category": "mood-only"
+  },
+  {
+    "prompt": "fresh and light",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": ["fresh", "light"],
+    "category": "mood-only"
+  },
+  {
+    "prompt": "spicy bold flavors",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": ["spicy", "bold"],
+    "category": "mood-only"
+  },
+  {
+    "prompt": "romantic date night",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": ["romantic", "date"],
+    "category": "mood-only"
+  },
+  {
+    "prompt": "warm hearty soup vibes",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": ["warm", "hearty"],
+    "category": "mood-only"
+  },
+  {
+    "prompt": "indulgent rich dessert",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": ["indulgent", "rich"],
+    "category": "mood-only"
+  },
+  {
+    "prompt": "festive holiday feast",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": ["festive", "holiday"],
+    "category": "mood-only"
+  },
+  {
+    "prompt": "under 20 minutes",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": "short", "effort": null},
+    "expected_mood_tokens": [],
+    "category": "constraint-only"
+  },
+  {
+    "prompt": "easy weeknight dinner",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": "low"},
+    "expected_mood_tokens": [],
+    "category": "constraint-only"
+  },
+  {
+    "prompt": "quick and simple",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": "short", "effort": "low"},
+    "expected_mood_tokens": [],
+    "category": "constraint-only"
+  },
+  {
+    "prompt": "30 minutes or less",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": "short", "effort": null},
+    "expected_mood_tokens": [],
+    "category": "constraint-only"
+  },
+  {
+    "prompt": "elaborate gourmet meal",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": "high"},
+    "expected_mood_tokens": [],
+    "category": "constraint-only"
+  },
+  {
+    "prompt": "beginner friendly recipe",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": "low"},
+    "expected_mood_tokens": [],
+    "category": "constraint-only"
+  },
+  {
+    "prompt": "2 hours slow cooked",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": "long", "effort": null},
+    "expected_mood_tokens": [],
+    "category": "constraint-only"
+  },
+  {
+    "prompt": "under an hour",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": "medium", "effort": null},
+    "expected_mood_tokens": [],
+    "category": "constraint-only"
+  },
+  {
+    "prompt": "salmon fillet with lemon, something elegant, 30 minutes",
+    "expected_ingredients": ["lemon", "salmon fillet"],
+    "expected_constraints": {"time": "short", "effort": null},
+    "expected_mood_tokens": ["elegant"],
+    "category": "mixed"
+  },
+  {
+    "prompt": "chicken and rice, cozy comfort food, easy",
+    "expected_ingredients": ["chicken", "rice"],
+    "expected_constraints": {"time": null, "effort": "low"},
+    "expected_mood_tokens": ["cozy", "comfort"],
+    "category": "mixed"
+  },
+  {
+    "prompt": "quick spicy chicken tacos",
+    "expected_ingredients": ["chicken"],
+    "expected_constraints": {"time": "short", "effort": null},
+    "expected_mood_tokens": ["spicy"],
+    "category": "mixed"
+  },
+  {
+    "prompt": "garlic butter pasta, romantic dinner, under an hour",
+    "expected_ingredients": ["butter", "garlic", "pasta"],
+    "expected_constraints": {"time": "medium", "effort": null},
+    "expected_mood_tokens": ["romantic"],
+    "category": "mixed"
+  },
+  {
+    "prompt": "healthy fresh salad with avocado and lime",
+    "expected_ingredients": ["avocado", "lime"],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": ["healthy", "fresh"],
+    "category": "mixed"
+  },
+  {
+    "prompt": "easy cozy chicken soup with garlic and onion",
+    "expected_ingredients": ["chicken", "garlic", "onion"],
+    "expected_constraints": {"time": null, "effort": "low"},
+    "expected_mood_tokens": ["cozy"],
+    "category": "mixed"
+  },
+  {
+    "prompt": "bold spicy rice and pepper, 45 minutes",
+    "expected_ingredients": ["pepper", "rice"],
+    "expected_constraints": {"time": "medium", "effort": null},
+    "expected_mood_tokens": ["spicy", "bold"],
+    "category": "mixed"
+  },
+  {
+    "prompt": "simple rustic tomato basil pasta",
+    "expected_ingredients": ["basil", "pasta", "tomato"],
+    "expected_constraints": {"time": null, "effort": "low"},
+    "expected_mood_tokens": ["rustic"],
+    "category": "mixed"
+  },
+  {
+    "prompt": "adventurous exotic curry with ginger and cilantro, under 30 minutes",
+    "expected_ingredients": ["cilantro", "ginger"],
+    "expected_constraints": {"time": "short", "effort": null},
+    "expected_mood_tokens": ["adventurous", "exotic"],
+    "category": "mixed"
+  },
+  {
+    "prompt": "light fresh lemon and spinach, quick",
+    "expected_ingredients": ["lemon", "spinach"],
+    "expected_constraints": {"time": "short", "effort": null},
+    "expected_mood_tokens": ["light", "fresh"],
+    "category": "mixed"
+  },
+  {
+    "prompt": "fancy elaborate chicken breast with cream and thyme",
+    "expected_ingredients": ["chicken", "chicken breast", "cream", "thyme"],
+    "expected_constraints": {"time": null, "effort": "high"},
+    "expected_mood_tokens": ["fancy"],
+    "category": "mixed"
+  },
+  {
+    "prompt": "warm hearty bacon and potato, beginner friendly",
+    "expected_ingredients": ["bacon", "potato"],
+    "expected_constraints": {"time": null, "effort": "low"},
+    "expected_mood_tokens": ["warm", "hearty"],
+    "category": "mixed"
+  },
+  {
+    "prompt": "",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "edge-case"
+  },
+  {
+    "prompt": "   ",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "edge-case"
+  },
+  {
+    "prompt": "asdfghjkl",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "edge-case"
+  },
+  {
+    "prompt": "chiken and tomatoe",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "edge-case"
+  },
+  {
+    "prompt": "feed me",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "edge-case"
+  },
+  {
+    "prompt": "I want to cook something with whatever is in my fridge",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "edge-case"
+  },
+  {
+    "prompt": "chicken chicken chicken garlic garlic garlic onion onion onion butter butter lemon lemon rice rice pasta pasta tomato tomato basil basil spinach spinach avocado carrot ginger cilantro lime honey broccoli corn bacon thyme rosemary oregano parsley cumin paprika and also some cinnamon",
+    "expected_ingredients": ["avocado", "bacon", "basil", "broccoli", "butter", "carrot", "chicken", "cilantro", "cinnamon", "corn", "cumin", "garlic", "ginger", "honey", "lemon", "lime", "onion", "oregano", "paprika", "parsley", "pasta", "rice", "rosemary", "spinach", "thyme", "tomato"],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "edge-case"
+  },
+  {
+    "prompt": "I dunno maybe something good?",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "edge-case"
+  },
+  {
+    "prompt": "!!!???...@@@###",
+    "expected_ingredients": [],
+    "expected_constraints": {"time": null, "effort": null},
+    "expected_mood_tokens": [],
+    "category": "edge-case"
+  }
+]
