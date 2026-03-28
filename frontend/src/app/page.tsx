@@ -2,6 +2,7 @@
 
 import { Hero } from "@/components/hero";
 import { SearchInput } from "@/components/search-input";
+import { ParseFeedback } from "@/components/parse-feedback";
 import { useRecipeSearch } from "@/hooks/use-recipe-search";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
     <div className="flex flex-col flex-1 items-center bg-cream min-h-screen">
       <Hero />
       <SearchInput onSearch={search} isLoading={isLoading} />
+      <ParseFeedback parsed={parsed} stage={stage} />
 
       {error && (
         <p className="mt-8 text-red-500 font-body text-sm">{error}</p>
