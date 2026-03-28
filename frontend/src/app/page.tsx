@@ -38,6 +38,15 @@ export default function Home() {
 
       <ResultsGrid results={results} stage={stage} />
 
+      {stage === "done" && results.length === 0 && (
+        <div className="mt-12 flex flex-col items-center gap-2">
+          <p className="font-editorial text-2xl text-terracotta-400">No recipes found</p>
+          <p className="font-body text-sm text-terracotta-300">
+            Try different ingredients, a mood, or a time constraint
+          </p>
+        </div>
+      )}
+
       {showIdle && (
         <p className="mt-24 mb-8 font-body text-xs text-terracotta-300 tracking-widest uppercase">
           Powered by classical NLP

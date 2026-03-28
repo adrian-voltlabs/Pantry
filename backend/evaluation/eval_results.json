@@ -1,0 +1,1927 @@
+[
+  {
+    "prompt": "chicken and rice",
+    "category": "ingredient-only",
+    "parsed_ingredients": [
+      "chicken",
+      "rice"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [
+      "chicken",
+      "rice"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Bibimbap",
+        "score": 0.878
+      },
+      {
+        "title": "Fried Rice",
+        "score": 0.871
+      },
+      {
+        "title": "Sweet and Spicy Chicken Drumsticks",
+        "score": 0.867
+      },
+      {
+        "title": "Parboiled Rice",
+        "score": 0.853
+      },
+      {
+        "title": "Rice and Wheat Berry Pilaf with Baby Spinach",
+        "score": 0.85
+      }
+    ]
+  },
+  {
+    "prompt": "garlic butter pasta",
+    "category": "ingredient-only",
+    "parsed_ingredients": [
+      "butter",
+      "garlic",
+      "pasta"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [
+      "butter",
+      "garlic",
+      "pasta"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Pesto Pasta Frittata",
+        "score": 0.946
+      },
+      {
+        "title": "Fried Potato and Garlic Puffs",
+        "score": 0.933
+      },
+      {
+        "title": "Homemade Cheese Spread with Garlic and Herbs",
+        "score": 0.93
+      },
+      {
+        "title": "Turkey Cutlets in Anchovy-Butter Sauce",
+        "score": 0.93
+      },
+      {
+        "title": "Spicy Peanut Sauce",
+        "score": 0.928
+      }
+    ]
+  },
+  {
+    "prompt": "tomato basil spinach",
+    "category": "ingredient-only",
+    "parsed_ingredients": [
+      "basil",
+      "spinach",
+      "tomato"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [
+      "tomato"
+    ],
+    "expected_ingredients": [
+      "basil",
+      "spinach",
+      "tomato"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Bacon, Lettuce, and Cherry Tomato Salad with Aioli Dressing",
+        "score": 0.912
+      },
+      {
+        "title": "Spinach-Artichoke Flatbread Pizzas",
+        "score": 0.903
+      },
+      {
+        "title": "Chicken Salad with Roasted Root Vegetable Vinaigrette",
+        "score": 0.895
+      },
+      {
+        "title": "Horseradish Cherry Tomatoes",
+        "score": 0.889
+      },
+      {
+        "title": "Penne with Tomato Pesto and Smoked Mozzarella",
+        "score": 0.887
+      }
+    ]
+  },
+  {
+    "prompt": "avocado and lime",
+    "category": "ingredient-only",
+    "parsed_ingredients": [
+      "avocado",
+      "lime"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [
+      "avocado",
+      "lime"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Tequila and Lime Baked Pineapple",
+        "score": 0.876
+      },
+      {
+        "title": "Tomato, Corn, and Avocado Salsa",
+        "score": 0.869
+      },
+      {
+        "title": "Avocado and Crab Soup",
+        "score": 0.864
+      },
+      {
+        "title": "Mango Pomegranate Guacamole",
+        "score": 0.862
+      },
+      {
+        "title": "Mexican Crema",
+        "score": 0.861
+      }
+    ]
+  },
+  {
+    "prompt": "chicken breast with garlic and lemon",
+    "category": "ingredient-only",
+    "parsed_ingredients": [
+      "chicken",
+      "chicken breast",
+      "garlic",
+      "lemon"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [
+      "chicken",
+      "chicken breast",
+      "garlic",
+      "lemon"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Garlic and Herb Spatchcock Grilled Chicken",
+        "score": 0.946
+      },
+      {
+        "title": "Chicken and Cheese Sliders",
+        "score": 0.931
+      },
+      {
+        "title": "Roast Chicken with Asparagus and Tahini Sauce",
+        "score": 0.929
+      },
+      {
+        "title": "Buttermilk Fried Chicken with Spinach Tomato Salad",
+        "score": 0.929
+      },
+      {
+        "title": "Fastest Chicken Parm",
+        "score": 0.929
+      }
+    ]
+  },
+  {
+    "prompt": "bacon and egg",
+    "category": "ingredient-only",
+    "parsed_ingredients": [
+      "bacon",
+      "egg"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [
+      "bacon",
+      "egg"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Baked Eggs with Bacon and Spinach",
+        "score": 0.852
+      },
+      {
+        "title": "Breakfast Stack",
+        "score": 0.844
+      },
+      {
+        "title": "Onion and Bacon Tart",
+        "score": 0.843
+      },
+      {
+        "title": "Pop\u2019s Double-Stuffed, Double-Fluffed American Omelet",
+        "score": 0.842
+      },
+      {
+        "title": "Egg and Bacon Muffin Cups",
+        "score": 0.841
+      }
+    ]
+  },
+  {
+    "prompt": "ground beef with onion and pepper",
+    "category": "ingredient-only",
+    "parsed_ingredients": [
+      "ground beef",
+      "onion",
+      "pepper"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [
+      "ground beef",
+      "onion",
+      "pepper"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Grilled Stuffed Peppers",
+        "score": 0.946
+      },
+      {
+        "title": "Beef and Kale Tacos",
+        "score": 0.944
+      },
+      {
+        "title": "Lamb-Fry",
+        "score": 0.938
+      },
+      {
+        "title": "Beef Stew",
+        "score": 0.937
+      },
+      {
+        "title": "Pork or Lamb Vindaloo",
+        "score": 0.936
+      }
+    ]
+  },
+  {
+    "prompt": "ginger cilantro lime rice",
+    "category": "ingredient-only",
+    "parsed_ingredients": [
+      "cilantro",
+      "ginger",
+      "lime",
+      "rice"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [
+      "cilantro",
+      "ginger",
+      "lime",
+      "rice"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Chipotle-Style Cilantro-Lime Rice",
+        "score": 0.935
+      },
+      {
+        "title": "Coconut Soba Noodles with Ginger Broccoli",
+        "score": 0.93
+      },
+      {
+        "title": "Asian Rice Noodle Salad",
+        "score": 0.923
+      },
+      {
+        "title": "Roasted Potato Wedges with Cilantro-Lime Mayonnaise",
+        "score": 0.921
+      },
+      {
+        "title": "Jerk-Spiced Duck",
+        "score": 0.919
+      }
+    ]
+  },
+  {
+    "prompt": "broccoli and carrot stir fry",
+    "category": "ingredient-only",
+    "parsed_ingredients": [
+      "broccoli",
+      "carrot"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [
+      "broccoli",
+      "carrot"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Broccoli Rabe",
+        "score": 0.846
+      },
+      {
+        "title": "Cauliflower and Broccoli Flan with Spinach Bechamel",
+        "score": 0.845
+      },
+      {
+        "title": "Ginger Carrot Dip with Crudites",
+        "score": 0.814
+      },
+      {
+        "title": "Vegetable Stock",
+        "score": 0.781
+      },
+      {
+        "title": "Penne with Broccoli Rabe, Walnuts, and Pecorino",
+        "score": 0.775
+      }
+    ]
+  },
+  {
+    "prompt": "rosemary thyme oregano chicken",
+    "category": "ingredient-only",
+    "parsed_ingredients": [
+      "chicken",
+      "oregano",
+      "rosemary",
+      "thyme"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [
+      "chicken",
+      "oregano",
+      "rosemary",
+      "thyme"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Roasted Baby Potatoes with Thyme and Rosemary",
+        "score": 0.891
+      },
+      {
+        "title": "Rosemary and Thyme Walnuts",
+        "score": 0.889
+      },
+      {
+        "title": "Pan-Fried Lamb Chops with Rosemary and Garlic",
+        "score": 0.88
+      },
+      {
+        "title": "Garlic-Rosemary Roast Chicken",
+        "score": 0.875
+      },
+      {
+        "title": "Grilled Fish",
+        "score": 0.869
+      }
+    ]
+  },
+  {
+    "prompt": "cozy comfort food",
+    "category": "mood-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [
+      "cozy",
+      "comfort"
+    ],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [
+      "cozy",
+      "comfort"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Southern Comfort Champagne Cocktail",
+        "score": 0.557
+      },
+      {
+        "title": "The Retro Highball",
+        "score": 0.488
+      },
+      {
+        "title": "Amaretti Tiramisu",
+        "score": 0.487
+      },
+      {
+        "title": "Cold-Brew Iced Tea",
+        "score": 0.467
+      },
+      {
+        "title": "Caff\u00e8 Shakerato",
+        "score": 0.465
+      }
+    ]
+  },
+  {
+    "prompt": "elegant dinner party",
+    "category": "mood-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [
+      "elegant",
+      "party"
+    ],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [
+      "elegant",
+      "party"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Robin's-Egg Place Card",
+        "score": 0.614
+      },
+      {
+        "title": "Fabric-Covered Vase Centerpiece",
+        "score": 0.608
+      },
+      {
+        "title": "Fall Spritz",
+        "score": 0.589
+      },
+      {
+        "title": "Sweet Tea",
+        "score": 0.569
+      },
+      {
+        "title": "Josh Ozersky's Favorite Burger",
+        "score": 0.559
+      }
+    ]
+  },
+  {
+    "prompt": "fresh and light",
+    "category": "mood-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [
+      "fresh",
+      "light"
+    ],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [
+      "fresh",
+      "light"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Lemony Crab Salad with Baby Greens",
+        "score": 0.813
+      },
+      {
+        "title": "Fresh Herb, Grapefruit, and Fennel Salad",
+        "score": 0.806
+      },
+      {
+        "title": "Rosemary Orange Syrup",
+        "score": 0.801
+      },
+      {
+        "title": "Yuba Pappardelle with English Peas, Fava Leaves, and Basil",
+        "score": 0.8
+      },
+      {
+        "title": "Super-Simple Overnight Porridge",
+        "score": 0.798
+      }
+    ]
+  },
+  {
+    "prompt": "spicy bold flavors",
+    "category": "mood-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [
+      "spicy",
+      "bold",
+      "flavors"
+    ],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [
+      "spicy",
+      "bold"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Sweet Potato Toasts with Toppings",
+        "score": 0.731
+      },
+      {
+        "title": "Quick Fresh Fruit Sauces for Yogurt, Pancakes, and Waffles",
+        "score": 0.729
+      },
+      {
+        "title": "Greens of the Wilderness Salad",
+        "score": 0.727
+      },
+      {
+        "title": "Lavender and Peach Bellini",
+        "score": 0.723
+      },
+      {
+        "title": "Caramelized Pork Rinds",
+        "score": 0.72
+      }
+    ]
+  },
+  {
+    "prompt": "romantic date night",
+    "category": "mood-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [
+      "romantic",
+      "date",
+      "night"
+    ],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [
+      "romantic",
+      "date"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Saut\u00e9ed Shishito Peppers: Summer's Best New Bite",
+        "score": 0.68
+      },
+      {
+        "title": "Robin's-Egg Place Card",
+        "score": 0.638
+      },
+      {
+        "title": "Sweet Tea",
+        "score": 0.63
+      },
+      {
+        "title": "Fabric-Covered Vase Centerpiece",
+        "score": 0.62
+      },
+      {
+        "title": "Angel Wings",
+        "score": 0.613
+      }
+    ]
+  },
+  {
+    "prompt": "warm hearty soup vibes",
+    "category": "mood-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [
+      "warm",
+      "hearty",
+      "soup"
+    ],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [
+      "warm",
+      "hearty"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Fried Mozzarella Balls",
+        "score": 0.791
+      },
+      {
+        "title": "Quick Fresh Fruit Sauces for Yogurt, Pancakes, and Waffles",
+        "score": 0.759
+      },
+      {
+        "title": "Tipsy Tea with Homemade Sweet Tea",
+        "score": 0.757
+      },
+      {
+        "title": "Almond-Milk Granita (Granita di Mandorle)",
+        "score": 0.755
+      },
+      {
+        "title": "Chilled Blueberry Soup",
+        "score": 0.748
+      }
+    ]
+  },
+  {
+    "prompt": "indulgent rich dessert",
+    "category": "mood-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [
+      "indulgent",
+      "rich"
+    ],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [
+      "indulgent",
+      "rich"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Dan Barber's Pork Belly",
+        "score": 0.492
+      },
+      {
+        "title": "Josh Ozersky's Favorite Burger",
+        "score": 0.489
+      },
+      {
+        "title": "Sunday Stash Sweet Potatoes",
+        "score": 0.488
+      },
+      {
+        "title": "Quick Omega-3 Granola",
+        "score": 0.483
+      },
+      {
+        "title": "Sweet Potato Flan",
+        "score": 0.483
+      }
+    ]
+  },
+  {
+    "prompt": "festive holiday feast",
+    "category": "mood-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [
+      "festive",
+      "holiday"
+    ],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [
+      "festive",
+      "holiday"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Holiday Cutouts",
+        "score": 0.551
+      },
+      {
+        "title": "Evening in Kingston",
+        "score": 0.544
+      },
+      {
+        "title": "Summer Camp Slushy",
+        "score": 0.529
+      },
+      {
+        "title": "Southern Comfort Champagne Cocktail",
+        "score": 0.524
+      },
+      {
+        "title": "Tipsy Tea with Homemade Sweet Tea",
+        "score": 0.521
+      }
+    ]
+  },
+  {
+    "prompt": "under 20 minutes",
+    "category": "constraint-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": "short",
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": "short",
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": false,
+    "top_5": []
+  },
+  {
+    "prompt": "easy weeknight dinner",
+    "category": "constraint-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": "low"
+    },
+    "parsed_mood": [
+      "easy"
+    ],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": "low"
+    },
+    "expected_mood_tokens": [],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Robin's-Egg Place Card",
+        "score": 0.68
+      },
+      {
+        "title": "Cooked Semi-Polished Rice (Haiga Mai)",
+        "score": 0.64
+      },
+      {
+        "title": "Instant Pot Hard-Boiled Eggs",
+        "score": 0.621
+      },
+      {
+        "title": "Josh Ozersky's Favorite Burger",
+        "score": 0.621
+      },
+      {
+        "title": "Saut\u00e9ed Shishito Peppers: Summer's Best New Bite",
+        "score": 0.612
+      }
+    ]
+  },
+  {
+    "prompt": "quick and simple",
+    "category": "constraint-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": "short",
+      "effort": "low"
+    },
+    "parsed_mood": [
+      "simple"
+    ],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": "short",
+      "effort": "low"
+    },
+    "expected_mood_tokens": [],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Robin's-Egg Place Card",
+        "score": 0.708
+      },
+      {
+        "title": "Fabric-Covered Vase Centerpiece",
+        "score": 0.685
+      },
+      {
+        "title": "Holiday Cutouts",
+        "score": 0.647
+      },
+      {
+        "title": "Chocolate-Filled Delights",
+        "score": 0.645
+      },
+      {
+        "title": "Homemade Yogurt",
+        "score": 0.641
+      }
+    ]
+  },
+  {
+    "prompt": "30 minutes or less",
+    "category": "constraint-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": "short",
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": "short",
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": false,
+    "top_5": []
+  },
+  {
+    "prompt": "elaborate gourmet meal",
+    "category": "constraint-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": "high"
+    },
+    "parsed_mood": [
+      "elaborate"
+    ],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": "high"
+    },
+    "expected_mood_tokens": [],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Fabric-Covered Vase Centerpiece",
+        "score": 0.59
+      },
+      {
+        "title": "Robin's-Egg Place Card",
+        "score": 0.533
+      },
+      {
+        "title": "Diner-Style Bacon for a Crowd",
+        "score": 0.453
+      },
+      {
+        "title": "Cooked Semi-Polished Rice (Haiga Mai)",
+        "score": 0.451
+      },
+      {
+        "title": "Holiday Cutouts",
+        "score": 0.447
+      }
+    ]
+  },
+  {
+    "prompt": "beginner friendly recipe",
+    "category": "constraint-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": "low"
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": "low"
+    },
+    "expected_mood_tokens": [],
+    "has_results": false,
+    "top_5": []
+  },
+  {
+    "prompt": "2 hours slow cooked",
+    "category": "constraint-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": "long",
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": "long",
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": false,
+    "top_5": []
+  },
+  {
+    "prompt": "under an hour",
+    "category": "constraint-only",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": "medium",
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": "medium",
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": false,
+    "top_5": []
+  },
+  {
+    "prompt": "salmon fillet with lemon, something elegant, 30 minutes",
+    "category": "mixed",
+    "parsed_ingredients": [
+      "lemon",
+      "salmon fillet"
+    ],
+    "parsed_constraints": {
+      "time": "short",
+      "effort": null
+    },
+    "parsed_mood": [
+      "elegant"
+    ],
+    "expected_ingredients": [
+      "lemon",
+      "salmon fillet"
+    ],
+    "expected_constraints": {
+      "time": "short",
+      "effort": null
+    },
+    "expected_mood_tokens": [
+      "elegant"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Simple Poached Salmon",
+        "score": 0.891
+      },
+      {
+        "title": "Grilled Salmon with Lime Butter Sauce",
+        "score": 0.859
+      },
+      {
+        "title": "Salmon with Caper-Anchovy Butter",
+        "score": 0.857
+      },
+      {
+        "title": "Broiled Salmon Steaks",
+        "score": 0.855
+      },
+      {
+        "title": "Crispy-Skinned Fish with Herb Sauce",
+        "score": 0.852
+      }
+    ]
+  },
+  {
+    "prompt": "chicken and rice, cozy comfort food, easy",
+    "category": "mixed",
+    "parsed_ingredients": [
+      "chicken",
+      "rice"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": "low"
+    },
+    "parsed_mood": [
+      "cozy",
+      "comfort",
+      "easy"
+    ],
+    "expected_ingredients": [
+      "chicken",
+      "rice"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": "low"
+    },
+    "expected_mood_tokens": [
+      "cozy",
+      "comfort"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Sweet and Spicy Chicken Drumsticks",
+        "score": 0.857
+      },
+      {
+        "title": "Bibimbap",
+        "score": 0.857
+      },
+      {
+        "title": "Perfect Steamed Rice",
+        "score": 0.851
+      },
+      {
+        "title": "Sushi Rice",
+        "score": 0.848
+      },
+      {
+        "title": "Sinangag (Garlic Fried Rice)",
+        "score": 0.848
+      }
+    ]
+  },
+  {
+    "prompt": "quick spicy chicken tacos",
+    "category": "mixed",
+    "parsed_ingredients": [
+      "chicken"
+    ],
+    "parsed_constraints": {
+      "time": "short",
+      "effort": null
+    },
+    "parsed_mood": [
+      "spicy"
+    ],
+    "expected_ingredients": [
+      "chicken"
+    ],
+    "expected_constraints": {
+      "time": "short",
+      "effort": null
+    },
+    "expected_mood_tokens": [
+      "spicy"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Fully Salted Roast Chicken",
+        "score": 0.886
+      },
+      {
+        "title": "Cornflake Fried Chicken",
+        "score": 0.884
+      },
+      {
+        "title": "Brother David's Grilled Chicken & Ribs",
+        "score": 0.878
+      },
+      {
+        "title": "Po-Tacos",
+        "score": 0.873
+      },
+      {
+        "title": "Hoisin Pork Tenderloin with Asian Carrot Salad",
+        "score": 0.869
+      }
+    ]
+  },
+  {
+    "prompt": "garlic butter pasta, romantic dinner, under an hour",
+    "category": "mixed",
+    "parsed_ingredients": [
+      "butter",
+      "garlic",
+      "pasta"
+    ],
+    "parsed_constraints": {
+      "time": "medium",
+      "effort": null
+    },
+    "parsed_mood": [
+      "romantic"
+    ],
+    "expected_ingredients": [
+      "butter",
+      "garlic",
+      "pasta"
+    ],
+    "expected_constraints": {
+      "time": "medium",
+      "effort": null
+    },
+    "expected_mood_tokens": [
+      "romantic"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Sweet Potato Macaroni and Cheese",
+        "score": 0.895
+      },
+      {
+        "title": "The Best Vegan Breakfast Sandwich",
+        "score": 0.893
+      },
+      {
+        "title": "Warm Potato Salad with Bacon",
+        "score": 0.893
+      },
+      {
+        "title": "Pork Noodle Soup with Cinnamon and Anise",
+        "score": 0.893
+      },
+      {
+        "title": "Vegan Pasta Alfredo With Two Stroganoff Variations",
+        "score": 0.888
+      }
+    ]
+  },
+  {
+    "prompt": "healthy fresh salad with avocado and lime",
+    "category": "mixed",
+    "parsed_ingredients": [
+      "avocado",
+      "lime"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [
+      "healthy",
+      "fresh"
+    ],
+    "expected_ingredients": [
+      "avocado",
+      "lime"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [
+      "healthy",
+      "fresh"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Mango Blueberry \"Fool\"",
+        "score": 0.91
+      },
+      {
+        "title": "Cherry Tomatoes Stuffed With Avocado",
+        "score": 0.91
+      },
+      {
+        "title": "Guanabana Sorbet with Mango Lime Coulis",
+        "score": 0.909
+      },
+      {
+        "title": "Crunchy Wasabi Salmon with Lime",
+        "score": 0.904
+      },
+      {
+        "title": "Tomato, Corn, and Avocado Salsa",
+        "score": 0.904
+      }
+    ]
+  },
+  {
+    "prompt": "easy cozy chicken soup with garlic and onion",
+    "category": "mixed",
+    "parsed_ingredients": [
+      "chicken",
+      "garlic",
+      "onion"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": "low"
+    },
+    "parsed_mood": [
+      "easy",
+      "cozy",
+      "soup"
+    ],
+    "expected_ingredients": [
+      "chicken",
+      "garlic",
+      "onion"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": "low"
+    },
+    "expected_mood_tokens": [
+      "cozy"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Meatballs and Noodle Soup (Almondigas)",
+        "score": 0.943
+      },
+      {
+        "title": "Spicy Asian Noodle and Chicken Salad",
+        "score": 0.94
+      },
+      {
+        "title": "Slow-Cooker Chicken Congee",
+        "score": 0.938
+      },
+      {
+        "title": "\"Nextover\" Chicken Tacos with Quick Refried Beans",
+        "score": 0.937
+      },
+      {
+        "title": "Chicken and Cheese Sliders",
+        "score": 0.933
+      }
+    ]
+  },
+  {
+    "prompt": "bold spicy rice and pepper, 45 minutes",
+    "category": "mixed",
+    "parsed_ingredients": [
+      "pepper",
+      "rice"
+    ],
+    "parsed_constraints": {
+      "time": "medium",
+      "effort": null
+    },
+    "parsed_mood": [
+      "bold",
+      "spicy"
+    ],
+    "expected_ingredients": [
+      "pepper",
+      "rice"
+    ],
+    "expected_constraints": {
+      "time": "medium",
+      "effort": null
+    },
+    "expected_mood_tokens": [
+      "spicy",
+      "bold"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Asian Rice Noodle Salad",
+        "score": 0.9
+      },
+      {
+        "title": "Vegetarian Piri Piri Chorizo Bake",
+        "score": 0.893
+      },
+      {
+        "title": "German Potato Salad",
+        "score": 0.893
+      },
+      {
+        "title": "Dakgangjeong (\ub2ed\uac15\uc815 / Korean Sweet, Crunchy Fried Chicken)",
+        "score": 0.892
+      },
+      {
+        "title": "Jollof Rice",
+        "score": 0.891
+      }
+    ]
+  },
+  {
+    "prompt": "simple rustic tomato basil pasta",
+    "category": "mixed",
+    "parsed_ingredients": [
+      "basil",
+      "pasta",
+      "tomato"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": "low"
+    },
+    "parsed_mood": [
+      "simple",
+      "rustic",
+      "tomato"
+    ],
+    "expected_ingredients": [
+      "basil",
+      "pasta",
+      "tomato"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": "low"
+    },
+    "expected_mood_tokens": [
+      "rustic"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Pan-Seared Polenta with Spicy Tomato-Basil Sauce",
+        "score": 0.906
+      },
+      {
+        "title": "B.l.t. Salad",
+        "score": 0.903
+      },
+      {
+        "title": "Penne with Tomato Pesto and Smoked Mozzarella",
+        "score": 0.902
+      },
+      {
+        "title": "Tempeh \"Bacon,\" Lettuce, and Tomato Sandwich",
+        "score": 0.897
+      },
+      {
+        "title": "Anchovies in Tomato Sauce with Pasta",
+        "score": 0.896
+      }
+    ]
+  },
+  {
+    "prompt": "adventurous exotic curry with ginger and cilantro, under 30 minutes",
+    "category": "mixed",
+    "parsed_ingredients": [
+      "cilantro",
+      "ginger"
+    ],
+    "parsed_constraints": {
+      "time": "short",
+      "effort": null
+    },
+    "parsed_mood": [
+      "adventurous",
+      "exotic"
+    ],
+    "expected_ingredients": [
+      "cilantro",
+      "ginger"
+    ],
+    "expected_constraints": {
+      "time": "short",
+      "effort": null
+    },
+    "expected_mood_tokens": [
+      "adventurous",
+      "exotic"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Jerk-Spiced Duck",
+        "score": 0.85
+      },
+      {
+        "title": "Creamy Cilantro-Lime Slaw",
+        "score": 0.849
+      },
+      {
+        "title": "Grilled Cauliflower Wedges With Herb Tarator",
+        "score": 0.849
+      },
+      {
+        "title": "Mango Pomegranate Guacamole",
+        "score": 0.848
+      },
+      {
+        "title": "Avocado Soup with Herbs, Slivered Radishes, and Pistachios",
+        "score": 0.844
+      }
+    ]
+  },
+  {
+    "prompt": "light fresh lemon and spinach, quick",
+    "category": "mixed",
+    "parsed_ingredients": [
+      "lemon",
+      "spinach"
+    ],
+    "parsed_constraints": {
+      "time": "short",
+      "effort": null
+    },
+    "parsed_mood": [
+      "light",
+      "fresh"
+    ],
+    "expected_ingredients": [
+      "lemon",
+      "spinach"
+    ],
+    "expected_constraints": {
+      "time": "short",
+      "effort": null
+    },
+    "expected_mood_tokens": [
+      "light",
+      "fresh"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Spinach and Celery Salad with Lemon Vinaigrette",
+        "score": 0.948
+      },
+      {
+        "title": "Lemon Gnocchi with Spinach and Peas",
+        "score": 0.944
+      },
+      {
+        "title": "Simple Spinach and Ricotta Gnocchi",
+        "score": 0.936
+      },
+      {
+        "title": "Arugula Salad",
+        "score": 0.935
+      },
+      {
+        "title": "Summer Salad with Lemon Dijon Dressing",
+        "score": 0.933
+      }
+    ]
+  },
+  {
+    "prompt": "fancy elaborate chicken breast with cream and thyme",
+    "category": "mixed",
+    "parsed_ingredients": [
+      "chicken",
+      "chicken breast",
+      "cream",
+      "thyme"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": "high"
+    },
+    "parsed_mood": [
+      "fancy",
+      "elaborate",
+      "cream"
+    ],
+    "expected_ingredients": [
+      "chicken",
+      "chicken breast",
+      "cream",
+      "thyme"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": "high"
+    },
+    "expected_mood_tokens": [
+      "fancy"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Cold Paprika-Grilled Chicken with Marinated Bell Peppers",
+        "score": 0.916
+      },
+      {
+        "title": "Crispy Oven-Fried Chicken",
+        "score": 0.912
+      },
+      {
+        "title": "Duck Egg Sandwich with Spinach and Chipotle Cream",
+        "score": 0.912
+      },
+      {
+        "title": "Chicken and Hominy Soup",
+        "score": 0.911
+      },
+      {
+        "title": "Chicken and Cheese Sliders",
+        "score": 0.91
+      }
+    ]
+  },
+  {
+    "prompt": "warm hearty bacon and potato, beginner friendly",
+    "category": "mixed",
+    "parsed_ingredients": [
+      "bacon",
+      "potato"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": "low"
+    },
+    "parsed_mood": [
+      "warm",
+      "hearty"
+    ],
+    "expected_ingredients": [
+      "bacon",
+      "potato"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": "low"
+    },
+    "expected_mood_tokens": [
+      "warm",
+      "hearty"
+    ],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Cheddar Potato Soup with Bacon",
+        "score": 0.879
+      },
+      {
+        "title": "Baked Eggs with Bacon and Spinach",
+        "score": 0.867
+      },
+      {
+        "title": "Warm Potato Salad with Bacon",
+        "score": 0.86
+      },
+      {
+        "title": "Fried Egg and Sausage Ciabatta Breakfast Pizzas",
+        "score": 0.86
+      },
+      {
+        "title": "Apples, Potatoes, and Bacon",
+        "score": 0.859
+      }
+    ]
+  },
+  {
+    "prompt": "",
+    "category": "edge-case",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": false,
+    "top_5": []
+  },
+  {
+    "prompt": "   ",
+    "category": "edge-case",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": false,
+    "top_5": []
+  },
+  {
+    "prompt": "asdfghjkl",
+    "category": "edge-case",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": false,
+    "top_5": []
+  },
+  {
+    "prompt": "chiken and tomatoe",
+    "category": "edge-case",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": false,
+    "top_5": []
+  },
+  {
+    "prompt": "feed me",
+    "category": "edge-case",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": false,
+    "top_5": []
+  },
+  {
+    "prompt": "I want to cook something with whatever is in my fridge",
+    "category": "edge-case",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": false,
+    "top_5": []
+  },
+  {
+    "prompt": "chicken chicken chicken garlic garlic garlic onion onion onion butter butter lemon lemon rice rice pasta pasta tomato tomato basil basil spinach spinach avocado carrot ginger cilantro lime honey broccoli corn bacon thyme rosemary oregano parsley cumin paprika and also some cinnamon",
+    "category": "edge-case",
+    "parsed_ingredients": [
+      "avocado",
+      "bacon",
+      "basil",
+      "broccoli",
+      "butter",
+      "carrot",
+      "chicken",
+      "cilantro",
+      "cinnamon",
+      "corn",
+      "cumin",
+      "garlic",
+      "ginger",
+      "honey",
+      "lemon",
+      "lime",
+      "onion",
+      "oregano",
+      "paprika",
+      "parsley",
+      "pasta",
+      "rice",
+      "rosemary",
+      "spinach",
+      "thyme",
+      "tomato"
+    ],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [
+      "tomato",
+      "tomato"
+    ],
+    "expected_ingredients": [
+      "avocado",
+      "bacon",
+      "basil",
+      "broccoli",
+      "butter",
+      "carrot",
+      "chicken",
+      "cilantro",
+      "cinnamon",
+      "corn",
+      "cumin",
+      "garlic",
+      "ginger",
+      "honey",
+      "lemon",
+      "lime",
+      "onion",
+      "oregano",
+      "paprika",
+      "parsley",
+      "pasta",
+      "rice",
+      "rosemary",
+      "spinach",
+      "thyme",
+      "tomato"
+    ],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Pumpkin Shrimp Curry",
+        "score": 0.954
+      },
+      {
+        "title": "Roasted Beer and Lime Cauliflower Tacos with Cilantro Coleslaw",
+        "score": 0.953
+      },
+      {
+        "title": "Manhattan Clam Chowder",
+        "score": 0.948
+      },
+      {
+        "title": "Shark and Bake",
+        "score": 0.947
+      },
+      {
+        "title": "Sweet Potato Chilaquiles with Griddled Salsa Roja",
+        "score": 0.945
+      }
+    ]
+  },
+  {
+    "prompt": "I dunno maybe something good?",
+    "category": "edge-case",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [
+      "maybe",
+      "good"
+    ],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": true,
+    "top_5": [
+      {
+        "title": "Saut\u00e9ed Shishito Peppers: Summer's Best New Bite",
+        "score": 0.703
+      },
+      {
+        "title": "Robin's-Egg Place Card",
+        "score": 0.685
+      },
+      {
+        "title": "Josh Ozersky's Favorite Burger",
+        "score": 0.68
+      },
+      {
+        "title": "Sweet Tea",
+        "score": 0.664
+      },
+      {
+        "title": "Simple Spring Green Salad",
+        "score": 0.645
+      }
+    ]
+  },
+  {
+    "prompt": "!!!???...@@@###",
+    "category": "edge-case",
+    "parsed_ingredients": [],
+    "parsed_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "parsed_mood": [],
+    "expected_ingredients": [],
+    "expected_constraints": {
+      "time": null,
+      "effort": null
+    },
+    "expected_mood_tokens": [],
+    "has_results": false,
+    "top_5": []
+  }
+]
