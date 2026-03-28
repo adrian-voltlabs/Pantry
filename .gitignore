@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+dist/
+build/
+*.egg
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (too large for git)
+backend/data/raw/
+backend/data/processed/*.index
+backend/data/processed/*.pkl
+backend/data/processed/*.npy
+
+# Node
+node_modules/
+.next/
+out/
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store

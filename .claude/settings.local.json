@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(npx skills:*)",
+      "Bash(git init:*)",
+      "Bash(python3 -m venv .venv)",
+      "Bash(source .venv/bin/activate)",
+      "Bash(pip install:*)",
+      "Bash(python -m spacy download en_core_web_sm)",
+      "Bash(/Users/adrian/Pantry/.gitignore:*)",
+      "Bash(/Users/adrian/Pantry/backend/requirements.txt:*)",
+      "Bash(/Users/adrian/Pantry/backend/pyproject.toml:*)",
+      "Read(//usr/local/bin/**)",
+      "Read(//opt/homebrew/bin/**)",
+      "Bash(rm -rf .venv)",
+      "Bash(python3.11 -m venv .venv)",
+      "Bash(git add:*)"
+    ]
+  }
+}
