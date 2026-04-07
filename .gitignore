@@ -14,9 +14,7 @@ venv/
 
 # Data (too large for git)
 backend/data/raw/
-backend/data/processed/*.index
-backend/data/processed/*.pkl
-backend/data/processed/*.npy
+backend/data/processed/
 
 # Node
 node_modules/
