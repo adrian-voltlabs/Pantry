@@ -1,5 +1,9 @@
 """
-Preprocess the raw Food Ingredients and Recipe Dataset.
+Preprocess the raw recipe datasets.
+
+Sources:
+  - Food Ingredients and Recipe Dataset with Image Name Mapping.csv
+  - recipes_w_search_terms.csv
 
 Outputs:
   - backend/data/processed/recipes.json
@@ -18,6 +22,7 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 ROOT = Path(__file__).resolve().parent.parent          # backend/
 RAW_CSV = ROOT / "data" / "raw" / "Food Ingredients and Recipe Dataset with Image Name Mapping.csv"
+RAW_CSV_2 = ROOT / "data" / "raw" / "recipes_w_search_terms.csv"
 OUT_DIR = ROOT / "data" / "processed"
 
 # ---------------------------------------------------------------------------
@@ -97,64 +102,166 @@ def parse_ingredients(raw: str) -> list[str]:
 
 
 # ---------------------------------------------------------------------------
+# Per-dataset loaders
+# ---------------------------------------------------------------------------
+
+def _load_image_dataset(pd) -> list[dict]:
+    """Load and normalise the Image Name Mapping CSV."""
+    print(f"Loading CSV from {RAW_CSV} ...")
+    df = pd.read_csv(RAW_CSV, index_col=0)
+    print(f"  Raw rows: {len(df):,}")
+
+    before = len(df)
+    df = df.drop_duplicates(subset=["Title", "Cleaned_Ingredients"])
+    print(f"  After dropping duplicates: {len(df):,} (removed {before - len(df):,})")
+
+    before = len(df)
+    df = df.dropna(subset=["Title", "Cleaned_Ingredients"])
+    print(f"  After dropping missing Title/Cleaned_Ingredients: {len(df):,} (removed {before - len(df):,})")
+
+    df["parsed"] = df["Cleaned_Ingredients"].apply(parse_ingredients)
+
+    before = len(df)
+    df = df[df["parsed"].apply(len) > 0]
+    print(f"  After dropping empty-ingredient rows: {len(df):,} (removed {before - len(df):,})")
+
+    df["normalized"] = df["parsed"].apply(
+        lambda lst: [normalize_ingredient(ing) for ing in lst]
+    )
+
+    records = []
+    for _, row in df.iterrows():
+        records.append({
+            "title": row["Title"],
+            "ingredients": row["normalized"],
+            "ingredients_raw": row["parsed"],
+            "instructions": row["Instructions"] if isinstance(row["Instructions"], str) else "",
+            "image_name": row["Image_Name"] if isinstance(row["Image_Name"], str) else "",
+            "tags": [],
+            "search_terms": [],
+        })
+    print(f"  Produced {len(records):,} records from dataset 1.\n")
+    return records
+
+
+def _load_search_terms_dataset(pd) -> list[dict]:
+    """Load and normalise the recipes_w_search_terms CSV."""
+    print(f"Loading CSV from {RAW_CSV_2} ...")
+    df = pd.read_csv(RAW_CSV_2)
+    print(f"  Raw rows: {len(df):,}")
+
+    before = len(df)
+    df = df.drop_duplicates(subset=["name", "ingredients"])
+    print(f"  After dropping duplicates: {len(df):,} (removed {before - len(df):,})")
+
+    before = len(df)
+    df = df.dropna(subset=["name", "ingredients"])
+    print(f"  After dropping missing name/ingredients: {len(df):,} (removed {before - len(df):,})")
+
+    df["parsed"] = df["ingredients"].apply(parse_ingredients)
+
+    before = len(df)
+    df = df[df["parsed"].apply(len) > 0]
+    print(f"  After dropping empty-ingredient rows: {len(df):,} (removed {before - len(df):,})")
+
+    df["normalized"] = df["parsed"].apply(
+        lambda lst: [normalize_ingredient(ing) for ing in lst]
+    )
+
+    # Parse steps list into a single instructions string
+    def _steps_to_str(raw) -> str:
+        if not isinstance(raw, str):
+            return ""
+        try:
+            steps = ast.literal_eval(raw)
+            if isinstance(steps, list):
+                return " ".join(str(s) for s in steps)
+        except (ValueError, SyntaxError):
+            pass
+        return str(raw)
+
+    # Parse raw ingredient strings list
+    def _parse_raw_str(raw) -> list[str]:
+        if not isinstance(raw, str):
+            return []
+        try:
+            items = ast.literal_eval(raw)
+            if isinstance(items, list):
+                return [str(i) for i in items]
+        except (ValueError, SyntaxError):
+            pass
+        return []
+
+    # Parse tags / search_terms sets/lists stored as strings
+    def _parse_set_str(raw) -> list[str]:
+        if not isinstance(raw, str):
+            return []
+        try:
+            obj = ast.literal_eval(raw)
+            if isinstance(obj, (set, list)):
+                return sorted(str(v) for v in obj)
+        except (ValueError, SyntaxError):
+            pass
+        return []
+
+    records = []
+    for _, row in df.iterrows():
+        records.append({
+            "title": row["name"],
+            "ingredients": row["normalized"],
+            "ingredients_raw": _parse_raw_str(row.get("ingredients_raw_str", "")),
+            "instructions": _steps_to_str(row.get("steps", "")),
+            "image_name": "",
+            "tags": _parse_set_str(row.get("tags", "")),
+            "search_terms": _parse_set_str(row.get("search_terms", "")),
+        })
+    print(f"  Produced {len(records):,} records from dataset 2.\n")
+    return records
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
 def main() -> None:
     import pandas as pd
 
-    print(f"Loading CSV from {RAW_CSV} ...")
-    df = pd.read_csv(RAW_CSV, index_col=0)
-    print(f"  Raw rows: {len(df):,}")
+    records1 = _load_image_dataset(pd)
+    records2 = _load_search_terms_dataset(pd)
 
-    # Drop duplicates
-    before = len(df)
-    df = df.drop_duplicates(subset=["Title", "Cleaned_Ingredients"])
-    print(f"  After dropping duplicates: {len(df):,} (removed {before - len(df):,})")
+    # Merge and de-duplicate across both datasets by case-insensitive title
+    seen_titles: set[str] = set()
+    all_records: list[dict] = []
+    for record in records1 + records2:
+        key = record["title"].lower().strip()
+        if key not in seen_titles:
+            seen_titles.add(key)
+            all_records.append(record)
 
-    # Drop rows missing Title or Cleaned_Ingredients
-    before = len(df)
-    df = df.dropna(subset=["Title", "Cleaned_Ingredients"])
-    print(f"  After dropping missing Title/Cleaned_Ingredients: {len(df):,} (removed {before - len(df):,})")
+    print(f"Combined unique recipes: {len(all_records):,} "
+          f"({len(records1):,} from dataset 1, {len(records2):,} from dataset 2, "
+          f"{len(records1) + len(records2) - len(all_records):,} cross-dataset duplicates removed)")
 
-    # Parse ingredients
-    df["parsed"] = df["Cleaned_Ingredients"].apply(parse_ingredients)
+    # Assign sequential IDs and build embed_text
+    recipes = []
+    for idx, record in enumerate(all_records):
+        recipes.append({
+            "id": idx,
+            **record,
+            "embed_text": record["title"] + " " + " ".join(record["ingredients"]),
+        })
 
-    # Drop rows where parsing yielded nothing
-    before = len(df)
-    df = df[df["parsed"].apply(len) > 0]
-    print(f"  After dropping empty-ingredient rows: {len(df):,} (removed {before - len(df):,})")
-
-    # Normalize ingredients
-    df["normalized"] = df["parsed"].apply(
-        lambda lst: [normalize_ingredient(ing) for ing in lst]
-    )
-
-    # Build ingredient vocabulary (ingredients in >= 3 recipes)
+    # Build ingredient vocabulary (ingredients appearing in >= 3 recipes)
     ingredient_counter: Counter[str] = Counter()
-    for ings in df["normalized"]:
-        ingredient_counter.update(set(ings))  # count each ingredient once per recipe
+    for r in recipes:
+        ingredient_counter.update(set(r["ingredients"]))
 
     vocab = {
         ing: count
         for ing, count in ingredient_counter.most_common()
         if count >= 3
     }
-    print(f"  Ingredient vocabulary size (>=3 recipes): {len(vocab):,}")
-
-    # Build recipe metadata
-    recipes = []
-    for idx, (_, row) in enumerate(df.iterrows()):
-        recipe = {
-            "id": idx,
-            "title": row["Title"],
-            "ingredients": row["normalized"],
-            "ingredients_raw": row["parsed"],
-            "instructions": row["Instructions"] if isinstance(row["Instructions"], str) else "",
-            "image_name": row["Image_Name"] if isinstance(row["Image_Name"], str) else "",
-            "embed_text": row["Title"] + " " + " ".join(row["normalized"]),
-        }
-        recipes.append(recipe)
+    print(f"Ingredient vocabulary size (>=3 recipes): {len(vocab):,}")
 
     # Save outputs
     OUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -162,13 +269,13 @@ def main() -> None:
     recipes_path = OUT_DIR / "recipes.json"
     vocab_path = OUT_DIR / "ingredient_vocab.json"
 
-    with open(recipes_path, "w") as f:
-        json.dump(recipes, f, indent=2)
-    print(f"  Saved {len(recipes):,} recipes to {recipes_path}")
+    with open(recipes_path, "w", encoding="utf-8") as f:
+        json.dump(recipes, f, indent=2, ensure_ascii=False)
+    print(f"Saved {len(recipes):,} recipes to {recipes_path}")
 
-    with open(vocab_path, "w") as f:
-        json.dump(vocab, f, indent=2)
-    print(f"  Saved vocabulary ({len(vocab):,} ingredients) to {vocab_path}")
+    with open(vocab_path, "w", encoding="utf-8") as f:
+        json.dump(vocab, f, indent=2, ensure_ascii=False)
+    print(f"Saved vocabulary ({len(vocab):,} ingredients) to {vocab_path}")
 
     print("Done!")
 

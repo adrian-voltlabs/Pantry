@@ -25,7 +25,7 @@ class RecipeRetriever:
 
     def __init__(self, index_path: str, recipes_path: str) -> None:
         self._index = faiss.read_index(str(Path(index_path)))
-        with open(recipes_path) as fh:
+        with open(recipes_path, encoding="utf-8") as fh:
             self._recipes: list[dict] = json.load(fh)
         self._embedder = GloVeEmbedder()
 
@@ -38,7 +38,7 @@ class RecipeRetriever:
         ingredient_tokens: list[str],
         mood_vector: np.ndarray | None,
         constraints: dict,
-        top_k: int = 10,
+        top_k: int = 100,
     ) -> list[dict]:
         """Search for recipes matching ingredients, mood, and constraints.
 
@@ -83,9 +83,12 @@ class RecipeRetriever:
             explanation = self._build_explanation(
                 recipe, ingredient_tokens, mood_vector, constraints
             )
+            # Skip recipes that don't contain all queried ingredients
+            overlap_count = len(explanation["matched_ingredients"])
+            if ingredient_tokens and overlap_count < len(ingredient_tokens):
+                continue
             # Re-rank: boost score for recipes that contain queried ingredients
             base_score = float(scores[0][rank])
-            overlap_count = len(explanation["matched_ingredients"])
             boosted_score = base_score + overlap_count * self.INGREDIENT_OVERLAP_BOOST
             candidates.append(
                 {

@@ -22,7 +22,7 @@ EMBEDDINGS_PATH = DATA_DIR / "recipe_embeddings.npy"
 def main():
     # Load recipes
     print(f"Loading recipes from {RECIPES_PATH} ...")
-    with open(RECIPES_PATH) as f:
+    with open(RECIPES_PATH, encoding="utf-8") as f:
         recipes = json.load(f)
     print(f"Loaded {len(recipes)} recipes.")
 

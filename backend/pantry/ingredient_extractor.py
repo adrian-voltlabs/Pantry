@@ -93,7 +93,7 @@ class IngredientExtractor:
         (strings) to counts (integers).  We only need the keys.
         """
         full_path = Path(path)
-        with full_path.open() as fh:
+        with full_path.open(encoding="utf-8") as fh:
             data: dict[str, int] = json.load(fh)
         return {k.lower() for k in data}
 

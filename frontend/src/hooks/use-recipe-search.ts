@@ -28,7 +28,7 @@ export function useRecipeSearch() {
       );
 
       setStage("recommending");
-      const recData = await recommend(embedData.query_vector, parseData.constraints);
+      const recData = await recommend(embedData.query_vector, parseData.constraints, parseData.ingredients);
       setResults(recData.results);
 
       setStage("done");

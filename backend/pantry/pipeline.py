@@ -141,7 +141,7 @@ class PantryPipeline:
     # Stage 3: Recommend
     # ------------------------------------------------------------------
 
-    def recommend(self, embedded: dict, top_k: int = 10) -> dict:
+    def recommend(self, embedded: dict, top_k: int = 100) -> dict:
         """Run FAISS retrieval using the embedded query vector.
 
         Parameters
@@ -190,9 +190,12 @@ class PantryPipeline:
             explanation = RecipeRetriever._build_explanation(
                 recipe, ingredient_tokens, embedded["_query_vector_np"], constraints
             )
+            # Skip recipes that don't contain all queried ingredients
+            overlap_count = len(explanation["matched_ingredients"])
+            if ingredient_tokens and overlap_count < len(ingredient_tokens):
+                continue
             # Re-rank: boost recipes that contain queried ingredients
             base_score = float(scores[0][rank])
-            overlap_count = len(explanation["matched_ingredients"])
             boosted_score = base_score + overlap_count * RecipeRetriever.INGREDIENT_OVERLAP_BOOST
             candidates.append(
                 {
@@ -214,7 +217,7 @@ class PantryPipeline:
     # Convenience: end-to-end search
     # ------------------------------------------------------------------
 
-    def search(self, text: str, top_k: int = 10) -> dict:
+    def search(self, text: str, top_k: int = 100) -> dict:
         """Chain parse -> embed -> recommend end-to-end.
 
         Returns

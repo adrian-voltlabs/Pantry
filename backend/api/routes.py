@@ -42,6 +42,7 @@ class EmbedResponse(BaseModel):
 class RecommendRequest(BaseModel):
     query_vector: Optional[list[float]] = None
     constraints: dict = {}
+    ingredients: list[str] = []
 
 
 class RecipeResult(BaseModel):
@@ -118,7 +119,7 @@ def recommend(req: RecommendRequest):
 
     # FAISS search
     query_matrix = query_vector.reshape(1, -1).astype(np.float32)
-    top_k = 10
+    top_k = 100
     over_fetch = top_k * 3
     scores, indices = pipeline._retriever._index.search(query_matrix, over_fetch)
 
@@ -132,10 +133,13 @@ def recommend(req: RecommendRequest):
             continue
         recipe = pipeline._retriever._recipes[idx]
         explanation = RecipeRetriever._build_explanation(
-            recipe, [], query_vector, req.constraints
+            recipe, req.ingredients, query_vector, req.constraints
         )
-        base_score = float(scores[0][rank])
+        # Skip recipes that don't contain all queried ingredients
         overlap_count = len(explanation["matched_ingredients"])
+        if req.ingredients and overlap_count < len(req.ingredients):
+            continue
+        base_score = float(scores[0][rank])
         boosted_score = base_score + overlap_count * RecipeRetriever.INGREDIENT_OVERLAP_BOOST
         candidates.append(
             {

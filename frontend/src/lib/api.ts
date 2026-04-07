@@ -28,12 +28,13 @@ export async function embed(
 
 export async function recommend(
   query_vector: number[] | null,
-  constraints: ParseResponse["constraints"]
+  constraints: ParseResponse["constraints"],
+  ingredients: string[]
 ): Promise<RecommendResponse> {
   const res = await fetch(`${BASE_URL}/recommend`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ query_vector, constraints }),
+    body: JSON.stringify({ query_vector, constraints, ingredients }),
   });
   if (!res.ok) throw new Error(`Recommend failed: ${res.statusText}`);
   return res.json();
